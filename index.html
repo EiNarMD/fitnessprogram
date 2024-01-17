@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Workout Essentials</title>
+    <style>
+
+header {
+            background-color: rgba(0, 0, 0, 0.575);
+            padding: 10px;
+            text-align: left;
+            color: rgba(178, 234, 88, 0.865);
+            margin: auto;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #669900b7;
+            font-family: Arial, sans-serif;
+        }
+
+        header img {
+            max-width: 120px;
+            height: auto;
+            display: inline; 
+            margin: 5px; 
+            float: left;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+            max-width: 1100px;
+            margin: 80px;
+            overflow: hidden; /* Hide overflow from the overlay */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Adjusted shadow on hover */
+  transform: scale(1.05); /* Scale the image on hover */
+            left: 17%;
+        }
+
+        .image-container img {
+            display: block;
+            margin: auto;
+            width: 100%;
+            filter: brightness(70%); /* Adjust the brightness of the image */
+   text-shadow: 0 4px 8px rgb(0, 0, 0); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effect */
+         
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+        }
+
+        .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid rgb(255, 255, 255); /* Adding border */
+            padding: 10px; /* Adding padding for better visibility */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adding shadow */
+            z-index: 1; /* Place text above the overlay */
+        }
+
+        /* Style for the button */
+       .image-button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.image-button:hover {
+background-color: #ffffff51;
+}
+
+
+
+        .additional-buttons {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px; /* Adjust the total width of buttons */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .additional-buttons .button {
+  /* Existing styles */
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adding shadow */
+}
+
+
+
+        /* Individual button backgrounds */
+        .button1 {
+            background-image: url('https://www.hss.edu/images/socialmedia/overtraining-1200x630.jpg'); /* Replace 'button_image_1.jpg' with your image URL */
+        }
+
+        .button2 {
+            background-image: url('https://images.everydayhealth.com/images/are-you-exercising-too-much-heres-how-to-tell-alt-badge-1440x810.jpg'); /* Replace 'button_image_2.jpg' with your image URL */
+        }
+
+        .button3 {
+            background-image: url('https://media.self.com/photos/5e7136064aa69e00099bfefe/master/w_2580%2Cc_limit/Delise_014.jpg'); /* Replace 'button_image_4.jpg' with your image URL */
+        }
+
+        
+    
+
+/* Add shadow and transition effect to button images */
+.button {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effect */
+}
+
+/* Scale and adjust the shadow on hover for button images */
+.button:hover {
+    transform: scale(1.10); /* Scale the button image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.901); /* Adjusted shadow on hover */
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://i.ibb.co/dBdRGtn/387611841-793273499264290-955252279092385401-n-removebg-preview.png" height="85px" width="85px">
+        <h1>Straightforward Fitness Finds</h1>
+    </header>
+
+    
+    <div class="image-container">
+        <div class="overlay"></div>
+        <img src="https://www.ghp-news.com/wp-content/uploads/2023/08/people-exercising.jpg"  alt="Big Picture">
+        <span class="image-text">The Best Workout Essentials for a Healthier You</span>
+        <a href="Homepage2.html" class="image-button">GET STARTED</a>
+    </div>
+
+   
+    <div class="additional-buttons">
+        <a href="aboutus.html" class="button button1">About Us</a>
+        <a href="program.html " class="button button2">Programs</a>
+        <a href="reference.html" class="button button3">Reference</a>
+    </div>
+
+
+      <br><br><br><br>
+      
+
+    <footer style="background-color: rgba(0, 0, 0, 0.575); padding: 10px; text-align: left; color: rgba(157, 255, 0, 0.865); font-size: 20px; font-family: Tahoma; font-weight: bold;">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <p>STAY CONNECTED:       
+    <a style="margin: 10px; color: rgba(157, 255, 0, 0.865);" href="https://www.facebook.com/workoutessentialsca?mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a>
+    <a style="margin: 10px; color: rgba(157, 255, 0, 0.865);" href="https://instagram.com/workoutessential?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+    <a style="margin: 10px; color: rgba(157, 255, 0, 0.865);" href="https://x.com/workoutessenti1?s=21&t=9_Z8NWVvan_Kw80qsPZfJg"><i class="fab fa-twitter"></i></a>
+    <a style="margin: 10px; color: rgba(157, 255, 0, 0.865);" href="mailto:josephcmacalua@su.edu.ph"><i class="far fa-envelope"></i></a>
+
+</footer>
+    
+</body>
+</html>

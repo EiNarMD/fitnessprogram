@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Signup/Login</title>
+
+  <style>
+ header {
+            background-color: rgba(0, 0, 0, 0.48);
+            padding: 30px;
+            text-align: center;
+            color: rgba(157, 255, 0, 0.865);
+            
+        }
+
+    body {
+      background-image: url('https://images.unsplash.com/photo-1557330359-ffb0deed6163?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1557330359-ffb0deed6163?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: rgba(255,255,255,0.5);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px; 
+      width: 300px; 
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color:rgba(157, 255, 0, 0.865);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color:rgba(157, 255, 0, 0.865);
+    }
+
+    .goback-button {
+    color: rgba(157, 255, 0, 0.865);
+    background-color: rgba(0, 0, 0, 0.343);
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0;
+    float: left;
+    border: 1px solid rgba(157, 255, 0, 0.865); /* Add border style */
+}
+
+
+        /* Hover effect for the Go Back button */
+        .goback-button:hover {
+            transition: background-color 0.5s ease;
+        }
+
+        .home-button {
+          color: rgba(157, 255, 0, 0.865);
+    background-color: rgba(0, 0, 0, 0.343);
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0;
+    float: right;
+    border: 1px solid rgba(157, 255, 0, 0.865); /* Add border style */
+        }
+
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <header>
+      <h1>Welcome to Straightforward Fitness Finds MEMBERSHIP <a href="Homepage2.html" class="goback-button" target="_blank">BACK</a> <a href="index.html" class="home-button" target="_blank">HOME</a> </h1>
+    </header>
+
+    <br><br><br>
+
+    <div class="container">
+      <form id="signupForm" onsubmit="signup(); return false;">
+          <h2>Signup</h2>
+          <label for="signupUsername">Username:</label>
+          <input type="text" id="signupUsername" name="signupUsername" required>
+          <label for="signupPassword">Password:</label>
+          <input type="password" id="signupPassword" name="signupPassword" required>
+          <button type="submit">Signup</button>
+      </form>
+  
+      <form id="loginForm" action="membership.html" method="post" onsubmit="login(); return false;">
+          <h2>Login</h2>
+          <label for="loginUsername">Username:</label>
+          <input type="text" id="loginUsername" name="loginUsername" required>
+          <label for="loginPassword">Password:</label>
+          <input type="password" id="loginPassword" name="loginPassword" required>
+          <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function signup() {
+      var username = document.getElementById('signupUsername').value;
+      var password = document.getElementById('signupPassword').value;
+  
+      sessionStorage.setItem('username', username);
+      sessionStorage.setItem('password', password);
+  
+      alert('Signup successful!');
+    }
+  
+    function login() {
+      var username = document.getElementById('loginUsername').value;
+      var password = document.getElementById('loginPassword').value;
+  
+      var storedUsername = sessionStorage.getItem('username');
+      var storedPassword = sessionStorage.getItem('password');
+  
+      if (username === storedUsername && password === storedPassword) {
+        alert('Login successful!');
+        window.location.href = 'membership.html'; // Redirects to membership.html
+      } else {
+        alert('Invalid username or password');
+        document.getElementById('loginUsername').value = "";
+        document.getElementById('loginPassword').value = "";
+      }
+    }
+  </script>
+</body>
+</html>
